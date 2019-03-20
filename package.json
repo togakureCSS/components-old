@@ -1,6 +1,6 @@
 {
   "name": "@descco/vanilla-react-vue-angular",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Descco UI",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "build-storybook:vanilla": "cross-env NODE_ENV=production node ./node_modules/@storybook/html/dist/server/build --config-dir ./internals/storybook/vanilla --output-dir ./lib/storybook/vanilla",
     "build-storybook:react": "cross-env NODE_ENV=production node ./node_modules/@storybook/react/dist/server/build -c ./internals/storybook/react/ -o ./lib/storybook/react",
     "build-storybook:vue": "cross-env NODE_ENV=production node ./node_modules/@storybook/vue/dist/server/build -c ./internals/storybook/vue/ -o ./lib/storybook/vue",
-    "build-storybook:angular": "cross-env NODE_ENV=production node ./node_modules/@storybook/angular/dist/server/build -c ./internals/storybook/angular/ -o ./lib/storybook/angular"
+    "build-storybook:angular": "cross-env NODE_ENV=production node ./node_modules/@storybook/angular/dist/server/build -c ./internals/storybook/angular/ -o ./lib/storybook/angular",
+    "release": "./node_modules/.bin/release-it"
   },
   "engines": {
     "node": ">=10.15.3",
@@ -52,6 +53,7 @@
     "babel-loader": "8.0.5",
     "babel-preset-vue": "2.0.2",
     "css-loader": "2.1.1",
+    "release-it": "10.3.1",
     "tslint": "5.14.0",
     "vue-loader": "15.7.0",
     "vue-template-compiler": "2.6.9",
