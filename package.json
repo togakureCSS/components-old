@@ -1,17 +1,17 @@
 {
-  "name": "@descco/react-vue-angular",
+  "name": "@descco/vanilla-react-vue-angular",
   "version": "0.1.0",
   "description": "Descco UI",
   "main": "lib/index.js",
   "scripts": {
-    "storybook:vanilla": "./node_modules/.bin/start-storybook -p 9000 -c ./internals/storybook/vanilla",
-    "storybook:react": "./node_modules/.bin/start-storybook -p 9001 -c ./internals/storybook/react",
-    "storybook:vue": "./node_modules/.bin/start-storybook -p 9002 -c ./internals/storybook/vue",
-    "storybook:angular": "./node_modules/.bin/start-storybook -p 9003 -c ./internals/storybook/angular",
-    "build-storybook:vanilla": "./node_modules/.bin/build-storybook -c ./internals/storybook/vanilla -o ./lib/storybook/vanilla",
-    "build-storybook:react": "./node_modules/.bin/build-storybook -c ./internals/storybook/react -o ./lib/storybook/react",
-    "build-storybook:vue": "./node_modules/.bin/build-storybook -c ./internals/storybook/vue -o ./lib/storybook/vue",
-    "build-storybook:angular": "./node_modules/.bin/build-storybook -c ./internals/storybook/angular -o ./lib/storybook/angular"
+    "storybook:vanilla": "node ./node_modules/@storybook/html/dist/server --port 9000 --config-dir ./internals/storybook/vanilla",
+    "storybook:react": "node ./node_modules/@storybook/react/dist/server -p 9001 -c ./internals/storybook/react/",
+    "storybook:vue": "node ./node_modules/@storybook/vue/dist/server -p 9002 -c ./internals/storybook/vue/",
+    "storybook:angular": "node ./node_modules/@storybook/angular/dist/server -p 9003 -c ./internals/storybook/angular/",
+    "build-storybook:vanilla": "cross-env NODE_ENV=production node ./node_modules/@storybook/html/dist/server/build --config-dir ./internals/storybook/vanilla --output-dir ./lib/storybook/vanilla",
+    "build-storybook:react": "cross-env NODE_ENV=production node ./node_modules/@storybook/react/dist/server/build -c ./internals/storybook/react/ -o ./lib/storybook/react",
+    "build-storybook:vue": "cross-env NODE_ENV=production node ./node_modules/@storybook/vue/dist/server/build -c ./internals/storybook/vue/ -o ./lib/storybook/vue",
+    "build-storybook:angular": "cross-env NODE_ENV=production node ./node_modules/@storybook/angular/dist/server/build -c ./internals/storybook/angular/ -o ./lib/storybook/angular"
   },
   "engines": {
     "node": ">=10.15.3",
@@ -25,7 +25,12 @@
     "url": "git+https://github.com/descco-ui/react-vue-angular.git"
   },
   "keywords": [
-    "descco"
+    "descco",
+    "ui",
+    "vanilla",
+    "react",
+    "vue",
+    "angular"
   ],
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://github.com/hemersonvianna)",
   "license": "MIT",
@@ -35,6 +40,7 @@
   "homepage": "https://github.com/descco-ui/react-vue-angular#readme",
   "devDependencies": {
     "@babel/core": "7.4.0",
+    "@babel/preset-react": "7.0.0",
     "@storybook/addon-actions": "5.0.3",
     "@storybook/addon-links": "5.0.3",
     "@storybook/addon-notes": "5.0.3",
@@ -44,15 +50,29 @@
     "@storybook/react": "5.0.3",
     "@storybook/vue": "5.0.3",
     "babel-loader": "8.0.5",
-    "babel-preset-react": "6.24.1",
     "babel-preset-vue": "2.0.2",
+    "css-loader": "2.1.1",
+    "tslint": "5.14.0",
     "vue-loader": "15.7.0",
-    "vue-template-compiler": "2.6.9"
+    "vue-template-compiler": "2.6.9",
+    "webpack": "4.29.6"
   },
   "dependencies": {
+    "@angular-devkit/core": "7.3.6",
+    "@angular/common": "7.2.10",
+    "@angular/compiler": "7.2.10",
+    "@angular/core": "7.2.10",
+    "@angular/forms": "7.2.10",
+    "@angular/platform-browser": "7.2.10",
+    "@angular/platform-browser-dynamic": "7.2.10",
     "@descco/ui-core": "0.1.1",
+    "cross-env": "5.2.0",
+    "prop-types": "15.7.2",
     "react": "16.8.4",
     "react-dom": "16.8.4",
-    "vue": "2.6.9"
+    "rxjs": "6.4.0",
+    "typescript": "3.3.4000",
+    "vue": "2.6.9",
+    "zone.js": "0.8.29"
   }
 }

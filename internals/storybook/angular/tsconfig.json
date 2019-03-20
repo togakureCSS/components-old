@@ -1,17 +1,15 @@
 {
-  "extends": "../../../src/tsconfig.app.json",
+  "extends": "../../../source/angular/tsconfig.app.json",
   "compilerOptions": {
     "types": [
       "node"
     ]
   },
   "exclude": [
-    "../../../src/test.ts",
-    "../../../src/**/*.spec.ts",
-    "../../../projects/**/*.spec.ts"
+    "../../../source/angular/test.ts",
+    "../../../source/angular/**/*.spec.ts",
   ],
   "include": [
-    "../../../src/**/*",
-    "../../../projects/**/*"
+    "../../../source/angular/**/*",
   ]
 }

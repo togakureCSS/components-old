@@ -4,13 +4,50 @@
 [![issues](https://img.shields.io/github/issues/descco-ui/react-vue-angular.svg?style=flat-square)](https://github.com/descco-ui/react-vue-angular/issues)
 
 
-```
+## Usage
+
+### for Vanilla
 // localhost:9000
+```
 yarn storybook:vanilla
+```
+
+### for React
 // localhost:9001
+```
 yarn storybook:react
+```
+
+### for Vue
 // localhost:9002
+```
 yarn storybook:vue
+```
+
+### for Angular
 // localhost:9003
+```
 yarn storybook:angular
+```
+
+## Build
+
+### for Vanilla
+```
+yarn build-storybook:vanilla
+```
+
+### for React
+```
+yarn build-storybook:react
+```
+
+### for Vue
+```
+yarn build-storybook:vue
+```
+
+### for Angular
+```
+yarn build-storybook:angular
 ```
