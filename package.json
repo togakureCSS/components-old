@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/descco-ui/react-vue-angular.git"
+    "url": "git+https://github.com/descco-ui/vanilla-react-vue-angular.git"
   },
   "keywords": [
     "descco",
@@ -36,9 +36,9 @@
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://github.com/hemersonvianna)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/descco-ui/react-vue-angular/issues"
+    "url": "https://github.com/descco-ui/vanilla-react-vue-angular/issues"
   },
-  "homepage": "https://github.com/descco-ui/react-vue-angular#readme",
+  "homepage": "https://github.com/descco-ui/vanilla-react-vue-angular#readme",
   "devDependencies": {
     "@babel/core": "7.4.0",
     "@babel/preset-react": "7.0.0",
