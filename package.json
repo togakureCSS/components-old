@@ -1,0 +1,31 @@
+{
+    "name": "@descco/react-vue-angular",
+    "version": "0.1.0",
+    "description": "Descco UI",
+    "main": "lib/index.js",
+    "scripts": {},
+    "engines": {
+      "node": ">=10.15.3",
+      "npm": ">=6.4.1"
+    },
+    "directories": {
+      "doc": "docs"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/descco-ui/react-vue-angular.git"
+    },
+    "keywords": [
+      "descco"
+    ],
+    "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://github.com/hemersonvianna)",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/descco-ui/react-vue-angular/issues"
+    },
+    "homepage": "https://github.com/descco-ui/react-vue-angular#readme",
+    "devDependencies": {},
+    "dependencies": {
+      "@descco/ui-core": "0.1.1"
+    }
+  }
