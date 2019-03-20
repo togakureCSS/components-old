@@ -12,7 +12,7 @@
     "build-storybook:react": "cross-env NODE_ENV=production node ./node_modules/@storybook/react/dist/server/build -c ./internals/storybook/react/ -o ./lib/storybook/react",
     "build-storybook:vue": "cross-env NODE_ENV=production node ./node_modules/@storybook/vue/dist/server/build -c ./internals/storybook/vue/ -o ./lib/storybook/vue",
     "build-storybook:angular": "cross-env NODE_ENV=production node ./node_modules/@storybook/angular/dist/server/build -c ./internals/storybook/angular/ -o ./lib/storybook/angular",
-    "release": "./node_modules/.bin/release-it"
+    "release": "./node_modules/.bin/release-it --no-npm.publish"
   },
   "engines": {
     "node": ">=10.15.3",
