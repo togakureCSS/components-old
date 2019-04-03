@@ -1,3 +1,19 @@
 {
-  "presets": []
+  "presets": ["@babel/preset-react",
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7", "ie >= 9"]
+      }
+    }]
+  ],
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "context": "./source/react",
+        "exclude": "node_modules",
+        "webpackHotModuleReloading": true
+      }
+    ],
+  ],
 }
