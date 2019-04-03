@@ -58,6 +58,7 @@
     "css-loader": "2.1.1",
     "release-it": "10.3.1",
     "style-loader": "0.23.1",
+    "to-string-loader": "1.1.5",
     "tslint": "5.14.0",
     "typescript": "3.3.4000",
     "vue-loader": "15.7.0",
