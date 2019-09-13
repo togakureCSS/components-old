@@ -1,12 +1,12 @@
-# Vanilla, React, Vue and Angular
+# Togakure ( Vanilla, React, Vue and Angular)
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![GitHub issues](https://img.shields.io/github/issues/org-hesiod/vanilla-react-vue-angular.svg)](https://github.com/org-hesiod/vanilla-react-vue-angular/issues)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/org-hesiod/vanilla-react-vue-angular.svg)
-![GitHub Release Date](https://img.shields.io/github/release-date/org-hesiod/vanilla-react-vue-angular.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/org-hesiod/vanilla-react-vue-angular.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/org-hesiod/vanilla-react-vue-angular.svg)
-![GitHub All Releases](https://img.shields.io/github/downloads/org-hesiod/vanilla-react-vue-angular/total.svg)
+[![GitHub issues](https://img.shields.io/github/issues/org-nekhemievich/togakure.svg)](https://github.com/org-nekhemievich/togakure/issues)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/org-nekhemievich/togakure.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/org-nekhemievich/togakure.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/org-nekhemievich/togakure.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/org-nekhemievich/togakure.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/org-nekhemievich/togakure/total.svg)
 
 ## Usage
 
