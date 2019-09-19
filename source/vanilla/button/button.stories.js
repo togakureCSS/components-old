@@ -1,13 +1,9 @@
-import { document, console } from 'global';
 import { storiesOf } from '@storybook/html';
+
+import Button from "./button-component";
 
 const stories = storiesOf('Button', module);
 
-stories.add('with text', () => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.innerText = 'Hello Button';
-    button.addEventListener('click', e => console.log(e));
-    return button;
-  }
-);
+stories.add('with text', () => (
+  new Button()
+));
