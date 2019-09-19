@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button</title>
+    <script>
+      class Button extends HTMLElement {
+        constructor() {
+          super();
+
+          const shadowRoot = this.attachShadow({mode: 'closed'});
+          shadowRoot.innerHTML = `
+            <button>text</button>
+          `;
+        }
+      }
+
+      window.customElements.define("tog-button", Button);
+    </script>
+  </head>
+  <body>
+    <tog-button></tog-button>
+  </body>
+</html>
