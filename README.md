@@ -8,6 +8,8 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/org-nekhemievich/togakure.svg)
 ![GitHub All Releases](https://img.shields.io/github/downloads/org-nekhemievich/togakure/total.svg)
 
+![Togakure](./internals/images/cover.png)
+
 ## Usage
 
 ### for Vanilla
