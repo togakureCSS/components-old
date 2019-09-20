@@ -1,4 +1,4 @@
-# Togakure ( Vanilla, React, Vue and Angular)
+# Togakure
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
 [![GitHub issues](https://img.shields.io/github/issues/org-nekhemievich/togakure.svg)](https://github.com/org-nekhemievich/togakure/issues)
@@ -9,6 +9,8 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/org-nekhemievich/togakure/total.svg)
 
 ![Togakure](./internals/images/cover.png)
+
+Project that brings together interface components that use the main libraries and frameworks of the front end development community.
 
 ## Usage
 
