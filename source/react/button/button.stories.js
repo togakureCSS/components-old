@@ -8,7 +8,7 @@ import '../../../node_modules/@descco/ui-core/lib/css/06-components/button.css';
 
 const stories = storiesOf('Button', module);
 
-stories.add('with text', () => (
+stories.add('default', () => (
     <div>
       <Button onClick={action('clicked')}>Default</Button>&nbsp;
       <Button style="primary">Primary</Button>&nbsp;

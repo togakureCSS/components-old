@@ -4,6 +4,6 @@ import Button from "./button-component";
 
 const stories = storiesOf('Button', module);
 
-stories.add('with text', () => (
+stories.add('default', () => (
   new Button()
 ));

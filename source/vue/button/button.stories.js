@@ -7,7 +7,7 @@ Vue.component('Button', Button);
 
 const stories = storiesOf('Button', module);
 
-stories.add('with text', () => ({
+stories.add('default', () => ({
   template: `
     <div>
       <Button>Test</Button>

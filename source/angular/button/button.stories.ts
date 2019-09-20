@@ -10,7 +10,7 @@ stories.addDecorator(
   })
 )
 
-stories.add('with text', () => ({
+stories.add('default', () => ({
   template: `
     <div>
       <ui-button text="Default"></ui-button>&nbsp;
