@@ -14,48 +14,36 @@ Project that brings together interface components that use the main libraries an
 
 ## Usage
 
-### for Vanilla
+```
+// Vanilla
 // localhost:9000
-```
 yarn storybook:vanilla
-```
 
-### for React
+// React
 // localhost:9001
-```
 yarn storybook:react
-```
 
-### for Vue
+// Vue
 // localhost:9002
-```
 yarn storybook:vue
-```
 
-### for Angular
+// Angular
 // localhost:9003
-```
 yarn storybook:angular
 ```
 
 ## Build
 
-### for Vanilla
 ```
+// Vanilla
 yarn build-storybook:vanilla
-```
 
-### for React
-```
+// React
 yarn build-storybook:react
-```
 
-### for Vue
-```
+// Vue
 yarn build-storybook:vue
-```
 
-### for Angular
-```
+// Angular
 yarn build-storybook:angular
 ```
