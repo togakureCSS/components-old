@@ -1,7 +1,7 @@
 {
-  "name": "togakure",
-  "version": "1.0.0",
-  "description": "UI",
+  "name": "@togakure/components",
+  "version": "0.0.0",
+  "description": "UI Components",
   "main": "lib/index.js",
   "scripts": {
     "storybook:vanilla": "node ./node_modules/@storybook/html/dist/server --static-dir ./node_modules,./source/vanilla --port 9000 --config-dir ./internals/storybook/vanilla",
@@ -12,7 +12,7 @@
     "build-storybook:react": "cross-env NODE_ENV=production node ./node_modules/@storybook/react/dist/server/build -c ./internals/storybook/react/ -o ./lib/storybook/react",
     "build-storybook:vue": "cross-env NODE_ENV=production node ./node_modules/@storybook/vue/dist/server/build -c ./internals/storybook/vue/ -o ./lib/storybook/vue",
     "build-storybook:angular": "cross-env NODE_ENV=production node ./node_modules/@storybook/angular/dist/server/build -c ./internals/storybook/angular/ -o ./lib/storybook/angular",
-    "release": "./node_modules/.bin/release-it --no-npm.publish"
+    "release": "./node_modules/.bin/release-it --no-npm.publish --git.tagName='v${version}' --github.release"
   },
   "engines": {
     "node": ">=10.15.3",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/org-nekhemievich/togakure.git"
+    "url": "git+https://github.com/org-togakure/components.git"
   },
   "keywords": [
     "togakure",
@@ -36,9 +36,9 @@
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://github.com/hemersonvianna)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/org-nekhemievich/togakure/issues"
+    "url": "https://github.com/org-togakure/components/issues"
   },
-  "homepage": "https://github.com/org-nekhemievich/togakure#readme",
+  "homepage": "https://github.com/org-togakure/components#readme",
   "devDependencies": {
     "@angular/cli": "8.3.4",
     "@babel/core": "7.6.0",
