@@ -4,7 +4,7 @@
   "description": "UI",
   "main": "lib/index.js",
   "scripts": {
-    "storybook:vanilla": "node ./node_modules/@storybook/html/dist/server --port 9000 --config-dir ./internals/storybook/vanilla",
+    "storybook:vanilla": "node ./node_modules/@storybook/html/dist/server --static-dir ./node_modules,./source/vanilla --port 9000 --config-dir ./internals/storybook/vanilla",
     "storybook:react": "node ./node_modules/@storybook/react/dist/server -p 9001 -c ./internals/storybook/react/",
     "storybook:vue": "node ./node_modules/@storybook/vue/dist/server -p 9002 -c ./internals/storybook/vue/",
     "storybook:angular": "node ./node_modules/@storybook/angular/dist/server -p 9003 -c ./internals/storybook/angular/",
@@ -26,7 +26,7 @@
     "url": "git+https://github.com/org-nekhemievich/togakure.git"
   },
   "keywords": [
-    "descco",
+    "togakure",
     "ui",
     "vanilla",
     "react",
@@ -52,6 +52,7 @@
     "@storybook/html": "5.2.1",
     "@storybook/react": "5.2.1",
     "@storybook/vue": "5.2.1",
+    "@webcomponents/webcomponentsjs": "2.3.0",
     "babel-loader": "8.0.6",
     "babel-plugin-react-css-modules": "5.2.6",
     "babel-preset-vue": "2.0.2",
@@ -73,9 +74,10 @@
     "@angular/forms": "8.2.6",
     "@angular/platform-browser": "8.2.6",
     "@angular/platform-browser-dynamic": "8.2.6",
-    "@descco/ui-core": "0.2.0",
+    "@togakure/styles": "0.2.0",
     "classnames": "2.2.6",
     "cross-env": "6.0.0",
+    "lit-element": "2.2.1",
     "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",

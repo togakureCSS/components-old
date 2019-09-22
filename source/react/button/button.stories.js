@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 
 import Button from './index';
 
-import '../../../node_modules/@descco/ui-core/lib/css/06-components/button.css';
+import '../../../node_modules/@togakure/styles/lib/css/06-components/button.css';
 
 const stories = storiesOf('Button', module);
 

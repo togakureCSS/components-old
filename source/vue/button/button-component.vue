@@ -1,9 +1,9 @@
 <style lang='css'>
-  @import '../../../node_modules/@descco/ui-core/lib/css/06-components/button.css';
+  @import '../../../node_modules/@togakure/styles/lib/css/06-components/button.css';
 </style>
 
 <script>
-import { styles } from '@descco/ui-core';
+import { styles } from '@togakure/styles';
 const classes = styles.button;
 export default {
   name: 'ui-button',

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 //styles
-import { styles } from '@descco/ui-core';
+import { styles } from '@togakure/styles';
 const classes = styles.button;
 
 /**

@@ -888,10 +888,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@descco/ui-core@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@descco/ui-core/-/ui-core-0.2.0.tgz#df5afc51dc316c116a9f25391d080bfd4e90272d"
-
 "@emotion/cache@^10.0.17", "@emotion/cache@^10.0.9":
   version "10.0.19"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.19.tgz#d258d94d9c707dcadaf1558def968b86bb87ad71"
@@ -1584,6 +1580,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@togakure/styles@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@togakure/styles/-/styles-0.2.0.tgz#bf336e7044537a1ae02dd150b94b4f4a697b7dfa"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -1781,6 +1781,10 @@
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
+
+"@webcomponents/webcomponentsjs@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.3.0.tgz#d17c67e9602d46f5a6c425bc00613bba83dcd0e2"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -5391,6 +5395,16 @@ lazy-universal-dotenv@^3.0.1:
     core-js "^3.0.4"
     dotenv "^8.0.0"
     dotenv-expand "^5.1.0"
+
+lit-element@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.2.1.tgz#79c94d8cfdc2d73b245656e37991bd1e4811d96f"
+  dependencies:
+    lit-html "^1.0.0"
+
+lit-html@^1.0.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.1.2.tgz#2e3560a7075210243649c888ad738eaf0daa8374"
 
 loader-runner@^2.4.0:
   version "2.4.0"

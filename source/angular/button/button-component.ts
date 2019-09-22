@@ -1,10 +1,10 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { styles } from '@descco/ui-core';
+import { styles } from '@togakure/styles';
 
 @Component({
   selector: 'ui-button',
   templateUrl: './button-component.html',
-  styleUrls: ['../../../node_modules/@descco/ui-core/lib/css/06-components/button.css']
+  styleUrls: ['../../../node_modules/@togakure/styles/lib/css/06-components/button.css']
 })
 
 export class ButtonComponent implements OnInit {
