@@ -74,7 +74,7 @@
     "@angular/forms": "8.2.6",
     "@angular/platform-browser": "8.2.6",
     "@angular/platform-browser-dynamic": "8.2.6",
-    "@togakure/styles": "0.2.0",
+    "@togakure/styles": "0.3.0",
     "classnames": "2.2.6",
     "cross-env": "6.0.0",
     "lit-element": "2.2.1",

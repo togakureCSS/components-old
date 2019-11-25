@@ -1580,9 +1580,9 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@togakure/styles@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@togakure/styles/-/styles-0.2.0.tgz#bf336e7044537a1ae02dd150b94b4f4a697b7dfa"
+"@togakure/styles@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@togakure/styles/-/styles-0.3.0.tgz#32709deed42b6ec4aa3af60c88ff141948ed6b0c"
 
 "@types/events@*":
   version "3.0.0"
