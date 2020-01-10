@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 //styles
-import { styles } from '@togakure/styles';
-const classes = styles.button;
+import { styles as styl } from '@togakure/styles';
+const styles = styl.button;
 
 /**
  * Button Component
@@ -20,11 +20,10 @@ class Button extends PureComponent {
    * @property {Boolean} rounded
    * @property {Boolean} circle
    * @property {Boolean} loading
-   * @property {String} style
+   * @property {String} styleType
    * @property {String} size
    * @property {String} type
    * @property {Boolean} children
-   * @property {String} className
    */
   static defaultProps = {
     active: false,
@@ -34,11 +33,10 @@ class Button extends PureComponent {
     rounded: false,
     circle: false,
     loading: false,
-    style: 'default',
+    styleType: 'default',
     size: 'medium',
     type: 'button',
     children: false,
-    className: undefined
   };
 
   /**
@@ -49,13 +47,12 @@ class Button extends PureComponent {
    * @property {Boolean} outline
    * @property {Boolean} rounded
    * @property {Boolean} circle
-   * @property {String} style
+   * @property {String} styleType
    * @property {String} loading
    * @property {String} size
    * @property {String} type
    * @property {Function} onClick
    * @property {Object} children
-   * @property {String} className
    */
   static propTypes = {
     active: PropTypes.bool,
@@ -66,11 +63,10 @@ class Button extends PureComponent {
     circle: PropTypes.bool,
     loading: PropTypes.bool,
     type: PropTypes.oneOf(['button', 'reset', 'submit']),
-    style: PropTypes.oneOf(['default', 'primary', 'success', 'info', 'warning', 'danger', 'transparent']),
-    size: PropTypes.oneOf(['mini', 'small','medium', 'large', 'none']),
+    styleType: PropTypes.oneOf(['default', 'primary', 'secondary', 'transparent', 'facebook', 'google']),
+    size: PropTypes.oneOf(['mini', 'small', 'medium', 'large', 'none']),
     onClick: PropTypes.func,
     children: PropTypes.any.isRequired,
-    className: PropTypes.string
   };
 
   /**
@@ -78,33 +74,43 @@ class Button extends PureComponent {
    * @return {ReactElement} markup
    */
   render() {
-    const { active, outline, rounded, circle, block, style, size, disabled, loading, onClick, children, type, className, ...elementProps } = this.props;
-
-    const fullClassName = classNames(
+    const {
+      active,
+      outline,
+      rounded,
+      circle,
+      block,
+      styleType,
+      size,
+      disabled,
+      loading,
+      onClick,
+      children,
+      type,
       className,
+      ...others
+    } = this.props;
+
+    const classes = classnames(
       {
-        [`${classes[style]}`]: style,
-        [`${classes[size]}`]: size,
-        [`${classes.block}`]: block,
-        [`${classes.outline}`]: outline,
-        [`${classes.rounded}`]: rounded,
-        [`${classes.circle}`]: circle,
-        [`${classes.active}`]: active,
-        [`${classes.loading}`]: loading
-      });
+        [`${styles[styleType]}`]: styleType,
+        [`${styles[size]}`]: size,
+        [`${styles.block}`]: block,
+        [`${styles.outline}`]: outline,
+        [`${styles.rounded}`]: rounded,
+        [`${styles.circle}`]: circle,
+        [`${styles.active}`]: active,
+        [`${styles.loading}`]: loading,
+      },
+      className
+    );
 
     if (!children) {
       return null;
     }
 
     return (
-      <button
-        {...elementProps}
-        type={type}
-        className={fullClassName}
-        onClick={onClick}
-        disabled={disabled}
-      >
+      <button data-testid="button" {...others} type={type} className={classes} onClick={onClick} disabled={disabled}>
         {children}
       </button>
     );

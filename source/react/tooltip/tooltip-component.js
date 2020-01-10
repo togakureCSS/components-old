@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 //styles
-import { styles } from '@togakure/styles';
-const classes = styles.tooltip;
+import { styles as styl } from '@togakure/styles';
+const styles = styl.tooltip;
 
 /**
  * Tooltip Component
@@ -42,7 +42,8 @@ class Tooltip extends PureComponent {
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
   /**
-   * constructor
+   * @constructor
+   * @param {Object} props
    */
   constructor(props) {
     super(props);
@@ -175,13 +176,13 @@ class Tooltip extends PureComponent {
     }
 
     return (
-      <div className={classnames(classes.tooltip, {
-        [classes['tooltip--top']] : position === 'top',
-        [classes['tooltip--bottom']] : position === 'bottom',
-        [classes['tooltip--left']] : position === 'left',
-        [classes['tooltip--right']] : position === 'right'
+      <div className={classnames(styles.tooltip, {
+        [styles['tooltip--top']] : position === 'top',
+        [styles['tooltip--bottom']] : position === 'bottom',
+        [styles['tooltip--left']] : position === 'left',
+        [styles['tooltip--right']] : position === 'right'
       })} style={{...this.getPosition(), width }} id="tooltip-content" role="tooltip">
-        <div className={classes['tooltip-content']}>{content}</div>
+        <div className={styles['tooltip-content']}>{content}</div>
       </div>
     );
   };
@@ -201,7 +202,7 @@ class Tooltip extends PureComponent {
         onBlur={this.handleHide}
         ref={this.sourceRef}
         aria-describedby="tooltip-content"
-        className={classes.wrap}
+        className={styles.wrap}
       >
         {this.renderContent()}
         {children}
