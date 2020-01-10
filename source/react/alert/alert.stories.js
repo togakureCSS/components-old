@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { decorateAction } from '@storybook/addon-actions';
 import { text, boolean, select } from '@storybook/addon-knobs';
 
 import Alert from './index';
