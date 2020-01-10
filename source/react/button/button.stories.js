@@ -118,19 +118,19 @@ stories.add('Ícone com estilo circular', () => (
     </Button>
     <br />
     <br />
-    <Button styleType="secodary" circle>
+    <Button styleType="secondary" circle>
       <Icon size="14px" />
     </Button>
     &nbsp;
-    <Button styleType="secodary" circle>
+    <Button styleType="secondary" circle>
       <Icon />
     </Button>
     &nbsp;
-    <Button styleType="secodary" circle>
+    <Button styleType="secondary" circle>
       <Icon size="36px" />
     </Button>
     &nbsp;
-    <Button styleType="secodary" circle>
+    <Button styleType="secondary" circle>
       <Icon size="50px" />
     </Button>
   </div>
