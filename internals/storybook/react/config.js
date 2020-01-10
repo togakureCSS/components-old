@@ -7,7 +7,7 @@ import { withLinks } from '@storybook/addon-links';
 
 import '@storybook/addon-console';
 
-import styles from '../../../node_modules/@togakure/styles/lib/css/07-pages/storybook.css';
+import styles from '!!style-loader!css-loader?modules=true!../../../node_modules/@togakure/styles/lib/css/07-pages/storybook.css';
 
 addDecorator(withKnobs);
 addDecorator(withNotes);
@@ -51,8 +51,8 @@ addDecorator((fn, context) => {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-            body { background: inherit }
-            [data-sb-kind] {
+            body { background: inherit; font-family: Arial, Helvetica, sans-serif; }
+            .sb-show-main {
               background: none;
               border: none;
               color: #ccc;
