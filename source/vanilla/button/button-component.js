@@ -1,10 +1,8 @@
-(function () {
+(function() {
   const currentDocument = document.currentScript.ownerDocument;
 
   const togakure = window.TOGAKURE || {};
   const classes = togakure.styles ? togakure.styles.button : {};
-
-  console.log(window.TOGAKURE);
 
   class Button extends HTMLElement {
     constructor() {
