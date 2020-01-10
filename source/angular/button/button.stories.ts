@@ -13,13 +13,13 @@ stories.addDecorator(
 stories.add('default', () => ({
   template: `
     <div>
-      <ui-button text="Default"></ui-button>&nbsp;
-      <ui-button style="primary" text="Primary"></ui-button>&nbsp;
-      <ui-button style="success" text="Success"></ui-button>&nbsp;
-      <ui-button style="info" text="Info"></ui-button>&nbsp;
-      <ui-button style="warning" text="Warning"></ui-button>&nbsp;
-      <ui-button style="danger" text="Danger"></ui-button>&nbsp;
-      <ui-button style="transparent" text="Text" size="none"></ui-button>&nbsp;
+      <tog-button text="Default"></tog-button>&nbsp;
+      <tog-button style="primary" text="Primary"></tog-button>&nbsp;
+      <tog-button style="success" text="Success"></tog-button>&nbsp;
+      <tog-button style="info" text="Info"></tog-button>&nbsp;
+      <tog-button style="warning" text="Warning"></tog-button>&nbsp;
+      <tog-button style="danger" text="Danger"></tog-button>&nbsp;
+      <tog-button style="transparent" text="Text" size="none"></tog-button>&nbsp;
     </div>
     `,
 }));

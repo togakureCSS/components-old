@@ -13,7 +13,7 @@ stories.addDecorator(
 stories.add('default', () => ({
   template: `
     <div>
-      <ui-breadcrumb></ui-breadcrumb>
+      <tog-breadcrumb></tog-breadcrumb>
     </div>
     `,
 }));

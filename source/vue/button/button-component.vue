@@ -6,7 +6,7 @@
 import { styles } from '@togakure/styles';
 const classes = styles.button;
 export default {
-  name: 'ui-button',
+  name: 'tog-button',
   data: () => {
     return {
       classes

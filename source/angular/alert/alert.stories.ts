@@ -13,7 +13,7 @@ stories.addDecorator(
 stories.add('default', () => ({
   template: `
     <div>
-      <ui-alert></ui-alert>
+      <tog-alert></tog-alert>
     </div>
     `,
 }));
