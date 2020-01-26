@@ -49,7 +49,7 @@ class Icon extends PureComponent {
   IconPathLoader(name) {
     if (name) {
       try {
-        return require(`!!babel-loader!svg-react-loader!../../images/svg/icon/${name}.svg`);
+        return require(`!!babel-loader!svg-react-loader!../../../node_modules/@togakure/styles/lib/images/svg/icon/${name}.svg`);
       } catch (e) {
         return false;
       }
