@@ -15,9 +15,9 @@ addDecorator(withInfo);
 
 addParameters({
   backgrounds: [
-    { name: 'Fundo do site', value: '#f5f5f5', default: true },
-    { name: 'Branco', value: '#fff' },
-    { name: 'Preto', value: '#000' },
+    { name: 'Default', value: '#f5f5f5', default: true },
+    { name: 'Light', value: '#fff' },
+    { name: 'Dark', value: '#000' },
   ],
 });
 
