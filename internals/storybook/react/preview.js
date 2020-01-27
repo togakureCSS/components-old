@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure, addParameters, addDecorator } from '@storybook/react';
+import { addParameters, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
@@ -71,14 +71,3 @@ addDecorator((fn, context) => {
     </div>
   );
 });
-
-function importAll(req) {
-  req.keys().forEach(filename => req(filename));
-}
-
-function loadStories() {
-  const req = require.context('../../../source/react', true, /\.stories\.js$/);
-  importAll(req);
-}
-
-configure(loadStories, module);

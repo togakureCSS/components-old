@@ -1,8 +1,8 @@
-import { configure, addParameters, addDecorator } from '@storybook/angular';
+import { addParameters, addDecorator } from '@storybook/angular';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
-import { withLinks } from '@storybook/addon-links';
+// import { withLinks } from '@storybook/addon-links';
 
 import '@storybook/addon-console';
 
@@ -18,11 +18,11 @@ addParameters({
   ],
 });
 
-addDecorator(withLinks);
+// addDecorator(withLinks);
 
 addParameters({
   options: {
-    name: 'Togakure - Angular',
+    name: 'Togakure - React',
     url: 'https://github.com/org-togakure/components',
     goFullScreen: false,
     showStoriesPanel: true,
@@ -30,22 +30,9 @@ addParameters({
     showSearchBox: false,
     addonPanelInRight: false,
     sortStoriesByKind: false,
-    hierarchySeparator: /\/|\./, // matches a . or /
-    hierarchyRootSeparator: /\|/, // matches a |
     sidebarAnimations: true,
     selectedAddonPanel: undefined,
     enableShortcuts: false,
     isToolshown: true
   }
 });
-
-function importAll(req) {
-  req.keys().forEach(filename => req(filename));
-}
-
-function loadStories() {
-  const req = require.context('../../../source/angular', true, /.stories.ts$/);
-  importAll(req);
-}
-
-configure(loadStories, module);
