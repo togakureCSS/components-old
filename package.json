@@ -1,5 +1,5 @@
 {
-  "name": "@togakure/components",
+  "name": "@tgkr/components",
   "version": "0.1.0",
   "description": "UI Components",
   "main": "lib/index.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/org-togakure/components.git"
+    "url": "git+https://github.com/tgkr/components.git"
   },
   "keywords": [
     "togakure",
@@ -36,9 +36,9 @@
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://github.com/hemersonvianna)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/org-togakure/components/issues"
+    "url": "https://github.com/tgkr/components/issues"
   },
-  "homepage": "https://github.com/org-togakure/components#readme",
+  "homepage": "https://github.com/tgkr/components#readme",
   "devDependencies": {
     "@angular-devkit/build-angular": "0.803.23",
     "@angular/cli": "8.3.23",
