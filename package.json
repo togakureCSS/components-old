@@ -33,7 +33,7 @@
     "vue",
     "angular"
   ],
-  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://github.com/hemersonvianna)",
+  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://nerdcalistenico.com.br)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tgkr/components/issues"
@@ -95,5 +95,8 @@
     "rxjs": "6.5.4",
     "vue": "2.6.11",
     "zone.js": "0.10.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
