@@ -1,15 +1,21 @@
-import Vue from 'vue';
-import { storiesOf } from '@storybook/vue';
-
 import Tooltip from './index';
 
-Vue.component('Tooltip', Tooltip);
+export default {
+  title: 'Tooltip',
+  component: Tooltip,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
 
-const stories = storiesOf('Tooltip', module);
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Tooltip },
+  template: '<tooltip @onClick="onClick" v-bind="$props" />',
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <Tooltip></Tooltip>
-    </div>`
-}));
+export const Default = Template.bind({});
+Default.args = {
+  type: 'primary',
+  label: 'Text',
+};

@@ -1,15 +1,21 @@
-import Vue from 'vue';
-import { storiesOf } from '@storybook/vue';
-
 import Tag from './index';
 
-Vue.component('Tag', Tag);
+export default {
+  title: 'Tag',
+  component: Tag,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
 
-const stories = storiesOf('Tag', module);
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Tag },
+  template: '<tag @onClick="onClick" v-bind="$props" />',
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <Tag></Tag>
-    </div>`
-}));
+export const Default = Template.bind({});
+Default.args = {
+  type: 'primary',
+  label: 'Text',
+};
