@@ -1,5 +1,7 @@
 module.exports = {
-  stories: ['../../../source/react/**/*.stories.js'],
+  stories: [
+    '../../../source/react/**/*.stories.@(js|jsx|ts|tsx)'
+  ],
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-links',
@@ -9,6 +11,7 @@ module.exports = {
     '@storybook/addon-backgrounds',
     '@storybook/addon-notes',
     '@dump247/storybook-state',
-    '@storybook/addon-events'
+    '@storybook/addon-events',
+    "@storybook/addon-essentials"
   ],
 };
