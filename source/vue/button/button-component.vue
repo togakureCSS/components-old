@@ -1,8 +1,6 @@
-<style lang='css'>
-  @import '../../../node_modules/@togakure/styles/lib/css/06-components/button.css';
-</style>
-
 <script>
+import '../../../node_modules/@togakure/styles/lib/css/06-components/button.css';
+
 import { styles } from '@togakure/styles';
 const classes = styles.button;
 export default {
@@ -13,6 +11,10 @@ export default {
     };
   },
   props: {
+    label: {
+      type: String,
+      required: true,
+    },
     type: {
       type: String,
       default: 'default'
@@ -66,6 +68,7 @@ export default {
     { [classes.block]: block },
     { [classes.loading]: loading }
   ]"
+  @click="onClick"
   :disabled="disabled"
-  ><slot></slot></button>
+  >{{ label }}</button>
 </template>

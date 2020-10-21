@@ -1,8 +1,6 @@
-<style lang='css'>
-  @import '../../../node_modules/@togakure/styles/lib/css/06-components/breadcrumb.css';
-</style>
-
 <script>
+import '../../../node_modules/@togakure/styles/lib/css/06-components/breadcrumb.css';
+
 import { styles } from '@togakure/styles';
 const classes = styles.breadcrumb;
 export default {
@@ -13,6 +11,10 @@ export default {
     };
   },
   props: {
+    label: {
+      type: String,
+      required: true,
+    },
     type: {
       type: String,
       default: 'default'
@@ -26,5 +28,5 @@ export default {
 <template>
   <div :class="[
     classes[type]
-  ]"><slot></slot></div>
+  ]">{{ label }}</div>
 </template>

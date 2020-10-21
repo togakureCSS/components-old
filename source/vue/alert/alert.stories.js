@@ -1,15 +1,21 @@
-import Vue from 'vue';
-import { storiesOf } from '@storybook/vue';
-
 import Alert from './index';
 
-Vue.component('Alert', Alert);
+export default {
+  title: 'Alert',
+  component: Alert,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
 
-const stories = storiesOf('Alert', module);
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Alert },
+  template: '<alert @onClick="onClick" v-bind="$props" />',
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <Alert></Alert>
-    </div>`
-}));
+export const Default = Template.bind({});
+Default.args = {
+  type: 'primary',
+  label: 'Text',
+};

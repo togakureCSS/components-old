@@ -13,6 +13,10 @@ export default {
     };
   },
   props: {
+    label: {
+      type: String,
+      required: true,
+    },
     type: {
       type: String,
       default: 'default'
@@ -26,5 +30,5 @@ export default {
 <template>
   <div :class="[
     classes[type]
-  ]"><slot></slot></div>
+  ]">{{ label }}</div>
 </template>

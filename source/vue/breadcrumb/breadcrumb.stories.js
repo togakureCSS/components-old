@@ -1,15 +1,21 @@
-import Vue from 'vue';
-import { storiesOf } from '@storybook/vue';
-
 import Breadcrumb from './index';
 
-Vue.component('Breadcrumb', Breadcrumb);
+export default {
+  title: 'Breadcrumb',
+  component: Breadcrumb,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
 
-const stories = storiesOf('Breadcrumb', module);
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Breadcrumb },
+  template: '<breadcrumb @onClick="onClick" v-bind="$props" />',
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <Breadcrumb></Breadcrumb>
-    </div>`
-}));
+export const Default = Template.bind({});
+Default.args = {
+  type: 'primary',
+  label: 'Text',
+};
