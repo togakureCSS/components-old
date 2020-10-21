@@ -1,31 +1,17 @@
-(function() {
-  const currentDocument = document.currentScript.ownerDocument;
+import { html } from 'lit-html';
 
-  const togakure = window.TOGAKURE || {};
-  const classes = togakure.styles ? togakure.styles.tooltip : {};
+import '@togakure/styles/lib/css/06-components/tooltip.css';
+import styles from '@togakure/styles/lib/js/styles';
 
-  class Tooltip extends HTMLElement {
-    constructor() {
-      super();
-    }
+const Tooltip = ({ text, styleType, onClick }) => {
+  return html`
+    <span
+      class=${['tooltip', styles.tooltip[styleType]].join(' ')}
+      @click=${onClick}
+    >
+      ${text}
+    </span>
+  `;
+};
 
-    connectedCallback() {
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-      const template = currentDocument.querySelector('#tooltip-template');
-      const instance = template.content.cloneNode(true);
-      shadowRoot.appendChild(instance);
-
-      const styleType = this.getAttribute('styleType');
-
-      this.render({ text, styleType, size });
-    }
-
-    render(props) {
-      const $tooltip = this.shadowRoot.querySelector('.tooltip');
-
-      $tooltip.classList.add(classes[props.styleType]);
-    }
-  }
-
-  customElements.define('tog-tooltip', Tooltip);
-})();
+export default Tooltip;

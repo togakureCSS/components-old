@@ -1,31 +1,17 @@
-(function() {
-  const currentDocument = document.currentScript.ownerDocument;
+import { html } from 'lit-html';
 
-  const togakure = window.TOGAKURE || {};
-  const classes = togakure.styles ? togakure.styles.tag : {};
+import '@togakure/styles/lib/css/06-components/tag.css';
+import styles from '@togakure/styles/lib/js/styles';
 
-  class Tag extends HTMLElement {
-    constructor() {
-      super();
-    }
+const Tag = ({ text, styleType, onClick }) => {
+  return html`
+    <span
+      class=${['tag', styles.tag[styleType]].join(' ')}
+      @click=${onClick}
+    >
+      ${text}
+    </span>
+  `;
+};
 
-    connectedCallback() {
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-      const template = currentDocument.querySelector('#tag-template');
-      const instance = template.content.cloneNode(true);
-      shadowRoot.appendChild(instance);
-
-      const styleType = this.getAttribute('styleType');
-
-      this.render({ text, styleType, size });
-    }
-
-    render(props) {
-      const $tag = this.shadowRoot.querySelector('.tag');
-
-      $tag.classList.add(classes[props.styleType]);
-    }
-  }
-
-  customElements.define('tog-tag', Tag);
-})();
+export default Tag;

@@ -1,8 +1,17 @@
-import { storiesOf } from '@storybook/html';
+import Tooltip from './index';
 
-const stories = storiesOf('Tooltip', module);
+export default {
+  title: 'Tooltip',
+  argTypes: {
+    styleType: { control: 'color' },
+    onClick: { action: 'onClick' },
+  },
+};
 
-stories.add('default', () => `
-    <tog-tooltip text="UX" content="User Experience" position="left"></tog-tooltip>
-  `
-);
+const Template = (args) => Tooltip(args);
+
+export const Default = Template.bind({});
+Default.args = {
+  styleType: 'info',
+  text: 'Tooltip',
+};

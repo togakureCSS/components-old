@@ -1,8 +1,17 @@
-import { storiesOf } from '@storybook/html';
+import Tag from './index';
 
-const stories = storiesOf('Tag', module);
+export default {
+  title: 'Tag',
+  argTypes: {
+    styleType: { control: 'color' },
+    onClick: { action: 'onClick' },
+  },
+};
 
-stories.add('default', () => `
-    <tog-tag></tog-tag>
-  `
-);
+const Template = (args) => Tag(args);
+
+export const Default = Template.bind({});
+Default.args = {
+  styleType: 'info',
+  text: 'Tag',
+};

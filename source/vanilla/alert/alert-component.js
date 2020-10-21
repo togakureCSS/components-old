@@ -1,31 +1,17 @@
-(function() {
-  const currentDocument = document.currentScript.ownerDocument;
+import { html } from 'lit-html';
 
-  const togakure = window.TOGAKURE || {};
-  const classes = togakure.styles ? togakure.styles.alert : {};
+import '@togakure/styles/lib/css/06-components/alert.css';
+import styles from '@togakure/styles/lib/js/styles';
 
-  class Alert extends HTMLElement {
-    constructor() {
-      super();
-    }
+const Alert = ({ text, styleType, onClick }) => {
+  return html`
+    <span
+      class=${['alert', styles.alert[styleType]].join(' ')}
+      @click=${onClick}
+    >
+      ${text}
+    </span>
+  `;
+};
 
-    connectedCallback() {
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-      const template = currentDocument.querySelector('#alert-template');
-      const instance = template.content.cloneNode(true);
-      shadowRoot.appendChild(instance);
-
-      const styleType = this.getAttribute('styleType');
-
-      this.render({ text, styleType, size });
-    }
-
-    render(props) {
-      const $alert = this.shadowRoot.querySelector('.alert');
-
-      $alert.classList.add(classes[props.styleType]);
-    }
-  }
-
-  customElements.define('tog-alert', Alert);
-})();
+export default Alert;
