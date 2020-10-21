@@ -1,8 +1,17 @@
-import { storiesOf } from '@storybook/html';
+import Alert from './index';
 
-const stories = storiesOf('Alert', module);
+export default {
+  title: 'Alert',
+  argTypes: {
+    styleType: { control: 'color' },
+    onClick: { action: 'onClick' },
+  },
+};
 
-stories.add('default', () => `
-    <tog-alert></tog-alert>
-  `
-);
+const Template = (args) => Alert(args);
+
+export const Default = Template.bind({});
+Default.args = {
+  styleType: 'info',
+  text: 'Alerta',
+};

@@ -1,8 +1,17 @@
-import { storiesOf } from '@storybook/html';
+import Breadcrumb from './index';
 
-const stories = storiesOf('Breadcrumb', module);
+export default {
+  title: 'Breadcrumb',
+  argTypes: {
+    styleType: { control: 'color' },
+    onClick: { action: 'onClick' },
+  },
+};
 
-stories.add('default', () => `
-    <tog-breadcrumb></tog-breadcrumb>
-  `
-);
+const Template = (args) => Breadcrumb(args);
+
+export const Default = Template.bind({});
+Default.args = {
+  styleType: 'info',
+  text: 'Breadcrumb',
+};

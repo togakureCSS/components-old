@@ -1,8 +1,18 @@
-import { storiesOf } from '@storybook/html';
+import Button from './index';
 
-const stories = storiesOf('Button', module);
+export default {
+  title: 'Button',
+  argTypes: {
+    styleType: { control: 'color' },
+    onClick: { action: 'onClick' },
+  },
+};
 
-stories.add('default', () => `
-    <tog-button text="Primary" styleType="primary" size="medium"></tog-button>
-  `
-);
+const Template = (args) => Button(args);
+
+export const Default = Template.bind({});
+Default.args = {
+  styleType: 'primary',
+  text: 'Primary',
+  size: 'medium'
+};

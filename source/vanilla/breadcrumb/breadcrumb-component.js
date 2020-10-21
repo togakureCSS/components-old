@@ -1,31 +1,17 @@
-(function() {
-  const currentDocument = document.currentScript.ownerDocument;
+import { html } from 'lit-html';
 
-  const togakure = window.TOGAKURE || {};
-  const classes = togakure.styles ? togakure.styles.breadcrumb : {};
+import '@togakure/styles/lib/css/06-components/breadcrumb.css';
+import styles from '@togakure/styles/lib/js/styles';
 
-  class Breadcrumb extends HTMLElement {
-    constructor() {
-      super();
-    }
+const Breadcrumb = ({ text, styleType, onClick }) => {
+  return html`
+    <span
+      class=${['breadcrumb', styles.breadcrumb[styleType]].join(' ')}
+      @click=${onClick}
+    >
+      ${text}
+    </span>
+  `;
+};
 
-    connectedCallback() {
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-      const template = currentDocument.querySelector('#breadcrumb-template');
-      const instance = template.content.cloneNode(true);
-      shadowRoot.appendChild(instance);
-
-      const styleType = this.getAttribute('styleType');
-
-      this.render({ text, styleType, size });
-    }
-
-    render(props) {
-      const $breadcrumb = this.shadowRoot.querySelector('.breadcrumb');
-
-      $breadcrumb.classList.add(classes[props.styleType]);
-    }
-  }
-
-  customElements.define('tog-breadcrumb', Breadcrumb);
-})();
+export default Breadcrumb;

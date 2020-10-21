@@ -1,42 +1,18 @@
-(function() {
-  const currentDocument = document.currentScript.ownerDocument;
+import { html } from 'lit-html';
 
-  const togakure = window.TOGAKURE || {};
-  const classes = togakure.styles ? togakure.styles.button : {};
+import '@togakure/styles/lib/css/06-components/button.css';
+import styles from '@togakure/styles/lib/js/styles';
 
-  class Button extends HTMLElement {
-    constructor() {
-      super();
+const Button = ({ text, styleType, size, onClick }) => {
+  return html`
+    <button
+      type="button"
+      class=${[styles.button[styleType], styles.button[size]].join(' ')}
+      @click=${onClick}
+    >
+      ${text}
+    </button>
+  `;
+};
 
-      this.addEventListener('click', e => {
-        this.buttonClick();
-      });
-    }
-
-    connectedCallback() {
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-      const template = currentDocument.querySelector('#button-template');
-      const instance = template.content.cloneNode(true);
-      shadowRoot.appendChild(instance);
-
-      const text = this.getAttribute('text');
-      const styleType = this.getAttribute('styleType');
-      const size = this.getAttribute('size');
-
-      this.render({ text, styleType, size });
-    }
-
-    buttonClick() {
-      console.log('click');
-    }
-
-    render(props) {
-      const $button = this.shadowRoot.querySelector('.button');
-
-      $button.innerText = props.text;
-      $button.classList.add(classes[props.styleType], classes[props.size]);
-    }
-  }
-
-  customElements.define('tog-button', Button);
-})();
+export default Button;
