@@ -1,13 +1,18 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-
 import Icon from './icon-component';
 
-const stories = storiesOf('Icon', module);
+export default {
+  title: 'Icon',
+  component: Icon,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
 
-stories.add('Padrão', () => (
-  <div>
-    <Icon name="adjust" size={24} />
-    <Icon name="plus" size={24} />
-  </div>
-));
+const Template = (args) => <Icon {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  name: 'adjust',
+  size: 24
+};
