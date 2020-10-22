@@ -1,19 +1,27 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import { TooltipComponent } from './index';
+import Tooltip from './tooltip-component';
 
-const stories = storiesOf('Tooltip', module);
+export default {
+  title: 'Tooltip',
+  component: Tooltip,
+  decorators: [
+    moduleMetadata({
+      declarations: [Tooltip],
+      imports: [CommonModule],
+    }),
+  ],
+} as Meta;
 
-stories.addDecorator(
-  moduleMetadata({
-    declarations: [TooltipComponent],
-  })
-)
+const Template: Story<Tooltip> = (args: Tooltip) => ({
+  component: Tooltip,
+  props: args,
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <tog-tooltip></tog-tooltip>
-    </div>
-    `,
-}));
+export const Default = Template.bind({});
+Default.args = {
+  style: 'primary',
+  text: 'Primary',
+};

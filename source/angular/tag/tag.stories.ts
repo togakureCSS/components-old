@@ -1,19 +1,27 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import { TagComponent } from './index';
+import Tag from './tag-component';
 
-const stories = storiesOf('Tag', module);
+export default {
+  title: 'Tag',
+  component: Tag,
+  decorators: [
+    moduleMetadata({
+      declarations: [Tag],
+      imports: [CommonModule],
+    }),
+  ],
+} as Meta;
 
-stories.addDecorator(
-  moduleMetadata({
-    declarations: [TagComponent],
-  })
-)
+const Template: Story<Tag> = (args: Tag) => ({
+  component: Tag,
+  props: args,
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <tog-tag></tog-tag>
-    </div>
-    `,
-}));
+export const Default = Template.bind({});
+Default.args = {
+  style: 'primary',
+  text: 'Primary',
+};

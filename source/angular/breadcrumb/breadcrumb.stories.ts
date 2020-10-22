@@ -1,19 +1,27 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import { BreadcrumbComponent } from './index';
+import Breadcrumb from './breadcrumb-component';
 
-const stories = storiesOf('Breadcrumb', module);
+export default {
+  title: 'Breadcrumb',
+  component: Breadcrumb,
+  decorators: [
+    moduleMetadata({
+      declarations: [Breadcrumb],
+      imports: [CommonModule],
+    }),
+  ],
+} as Meta;
 
-stories.addDecorator(
-  moduleMetadata({
-    declarations: [BreadcrumbComponent],
-  })
-)
+const Template: Story<Breadcrumb> = (args: Breadcrumb) => ({
+  component: Breadcrumb,
+  props: args,
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <tog-breadcrumb></tog-breadcrumb>
-    </div>
-    `,
-}));
+export const Default = Template.bind({});
+Default.args = {
+  style: 'primary',
+  text: 'Primary',
+};
