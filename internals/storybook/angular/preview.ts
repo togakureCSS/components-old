@@ -1,29 +1,25 @@
-import { addParameters, addDecorator } from '@storybook/angular';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withNotes } from '@storybook/addon-notes';
-import { withInfo } from '@storybook/addon-info';
-// import { withLinks } from '@storybook/addon-links';
+import { addParameters } from '@storybook/angular';
+import { setCompodocJson } from '@storybook/addon-docs/angular';
 
-import '@storybook/addon-console';
+import docJson from './documentation.json';
 
-addDecorator(withKnobs);
-addDecorator(withNotes);
-addDecorator(withInfo);
+const filtered = !docJson?.components
+  ? docJson
+  : {
+      ...docJson,
+      components: docJson.components.filter((c) => c.name !== 'ButtonComponent'),
+    };
 
-addParameters({
-  backgrounds: [
-    { name: 'Default', value: '#f5f5f5', default: true },
-    { name: 'Light', value: '#fff' },
-    { name: 'Dark', value: '#000' },
-  ],
-});
-
-// addDecorator(withLinks);
+setCompodocJson(filtered);
 
 addParameters({
+  docs: {
+    // inlineStories: true,
+    iframeHeight: '60px',
+  },
   options: {
-    name: 'Togakure - React',
-    url: 'https://github.com/org-togakure/components',
+    name: 'Togakure - Angular',
+    url: 'https://github.com/tgkr/components',
     goFullScreen: false,
     showStoriesPanel: true,
     showAddonPanel: true,

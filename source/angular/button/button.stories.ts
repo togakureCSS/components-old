@@ -1,25 +1,28 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import { ButtonComponent } from './index';
+import Button from './button-component';
 
-const stories = storiesOf('Button', module);
+export default {
+  title: 'Button',
+  component: Button,
+  decorators: [
+    moduleMetadata({
+      declarations: [Button],
+      imports: [CommonModule],
+    }),
+  ],
+} as Meta;
 
-stories.addDecorator(
-  moduleMetadata({
-    declarations: [ButtonComponent],
-  })
-)
+const Template: Story<Button> = (args: Button) => ({
+  component: Button,
+  props: args,
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <tog-button text="Default"></tog-button>&nbsp;
-      <tog-button style="primary" text="Primary"></tog-button>&nbsp;
-      <tog-button style="success" text="Success"></tog-button>&nbsp;
-      <tog-button style="info" text="Info"></tog-button>&nbsp;
-      <tog-button style="warning" text="Warning"></tog-button>&nbsp;
-      <tog-button style="danger" text="Danger"></tog-button>&nbsp;
-      <tog-button style="transparent" text="Text" size="none"></tog-button>&nbsp;
-    </div>
-    `,
-}));
+export const Default = Template.bind({});
+Default.args = {
+  style: 'primary',
+  size: 'medium',
+  text: 'Primary',
+};

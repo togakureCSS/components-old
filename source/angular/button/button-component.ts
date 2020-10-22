@@ -1,34 +1,42 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { styles } from '@togakure/styles';
 
 @Component({
   selector: 'tog-button',
-  templateUrl: './button-component.html',
+  template: `
+    <button
+      (click)="onClick.emit($event)"
+      type="{{type || 'button'}}"
+      [ngClass]="classes"
+    >
+    {{ text }}
+    </button>
+  `,
   styleUrls: ['../../../node_modules/@togakure/styles/lib/css/06-components/button.css']
 })
 
-export class ButtonComponent implements OnInit {
-  classes: object;
-  @Input() className: string;
-  @Input() style: string;
-  @Input() type: string;
-  @Input() text: string;
-  @Input() size: string;
-  @Output() onClick: EventEmitter<any> = new EventEmitter<any>();
+export default class ButtonComponent {
+  @Input()
+  className: string;
+  
+  @Input()
+  style: string;
+  
+  @Input()
+  type: string;
+  
+  @Input()
+  text: string;
+  
+  @Input()
+  size: string;
+  
+  @Output()
+  onClick = new EventEmitter<Event>();
 
-  constructor() {
-    this.classes = styles.button;
-  }
+  public get classes(): string[] {
+    const mode = styles.button[this.style];
 
-  ngOnInit() {}
-
-  getStyle(style, size) {
-    const styleName = this.classes[style] || this.classes['default'];
-    const sizeName = this.classes[size] || this.classes['medium'];
-    return `${styleName} ${sizeName}`;
-  }
-
-  handleClick(event: any) {
-    this.onClick.emit(event);
+    return [styles.button[this.size], mode];
   }
 };

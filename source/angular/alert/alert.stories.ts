@@ -1,19 +1,27 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import { AlertComponent } from './index';
+import Alert from './alert-component';
 
-const stories = storiesOf('Alert', module);
+export default {
+  title: 'Alert',
+  component: Alert,
+  decorators: [
+    moduleMetadata({
+      declarations: [Alert],
+      imports: [CommonModule],
+    }),
+  ],
+} as Meta;
 
-stories.addDecorator(
-  moduleMetadata({
-    declarations: [AlertComponent],
-  })
-)
+const Template: Story<Alert> = (args: Alert) => ({
+  component: Alert,
+  props: args,
+});
 
-stories.add('default', () => ({
-  template: `
-    <div>
-      <tog-alert></tog-alert>
-    </div>
-    `,
-}));
+export const Default = Template.bind({});
+Default.args = {
+  style: 'primary',
+  text: 'Primary',
+};
